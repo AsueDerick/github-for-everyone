@@ -1,1 +1,34 @@
+name: Weekly Team Sync
+on: 
+  watch
+    # schedule:
+    #   - cron: 20 07 * * 1
+jobs:
+  create_issue:
+    name:
+    runs-on: ubuntu-latest
+    permissions: 
+      issues: write
+    steps: 
+      - name: create team sync issues
+        uses: imjohnbo/issue-bot@v3
+        with: 
+          assignees: "monalisa, octocat"
+          labels: "bug"
+          title: "team sync"
+          body: |-
+            ### Agenda
 
+            - [ ] Start the recording
+            - [ ] Check-ins
+            - [ ] Discussion points 
+            - [ ]  
+            :wave: Hi, {{#each assignees}}@{{this}}{{#unless @last}}, {{/unless}}{{/each}}!
+
+            ### Discussion points
+            - [work this week]()
+        
+          pinned: true
+          close-previous: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
