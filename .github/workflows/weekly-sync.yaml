@@ -21,6 +21,8 @@ jobs:
 
             - [ ] Start the recording
             - [ ] Check-ins
+            - [ ] Discussion points 
+            - [ ]  
             :wave: Hi, {{#each assignees}}@{{this}}{{#unless @last}}, {{/unless}}{{/each}}!
 
             ### Discussion points
