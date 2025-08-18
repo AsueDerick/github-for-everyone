@@ -13,7 +13,7 @@ jobs:
       - name: create team sync issues
         uses: imjohnbo/issue-bot@v3
         with: 
-          assignees: "derick001"
+          assignees: "AsueDerick"
           labels: "bug"
           title: "team sync"
           body: |-
