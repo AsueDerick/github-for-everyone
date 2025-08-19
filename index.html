@@ -15,41 +15,46 @@
       }
     </style>
   </head>
-  <body class="bg-blue-700 text-[#eee] m-0 p-0 text-[62.5%] box-border">
+  <body class="bg-blue-700 text-[#eee] m-0 p-0 box-border">
     <header class="relative h-[35vh] border-b-[7px] border-[#eee]">
       <h1
-        class="text-[4rem] text-center absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        class="text-2xl sm:text-4xl lg:text-[4rem] text-center absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-2"
       >
         Guess My Number!
       </h1>
-      <p class="text-[1.4rem] absolute top-8 right-8">(Between 1 and 20)</p>
+      <p class="text-xs sm:text-sm lg:text-[1.4rem] absolute top-4 right-4 sm:top-8 sm:right-8">
+        (Between 1 and 20)
+      </p>
       <button
-        class="btn again absolute top-4 left-8 bg-[#eee] text-[#222] text-[1rem] px-4 py-2 font-['Press Start 2P'] hover:bg-[#ccc]"
+        class="btn again absolute top-2 left-2 sm:top-4 sm:left-8 bg-[#eee] text-[#222] text-xs sm:text-sm px-3 py-2 font-['Press Start 2P'] hover:bg-[#ccc]"
       >
         Again!
       </button>
       <div
-        class="number bg-[#eee] text-[#333] text-[6rem] w-[15rem] h-[8rem] py-2 text-center absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"
+        class="number bg-[#eee] text-[#333] text-4xl sm:text-6xl lg:text-[6rem] w-24 sm:w-40 h-16 sm:h-28 py-2 text-center absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"
       >
         ?
       </div>
     </header>
 
-    <main class="h-[65vh] text-[#eee] flex items-center justify-around">
-      <section class="left w-[52rem] flex flex-col items-center">
+    <main
+      class="h-auto min-h-[65vh] text-[#eee] flex flex-col sm:flex-row items-center justify-around p-4 gap-6"
+    >
+      <section class="left w-full sm:w-[26rem] lg:w-[52rem] flex flex-col items-center">
         <input
           type="number"
-          class="guess bg-transparent border-[4px] border-[#eee] text-inherit font-['Press Start 2P'] text-[5rem] py-10 w-[15rem] h-[5rem] text-center block mb-10"
+          class="guess bg-transparent border-[4px] border-[#eee] text-inherit font-['Press Start 2P'] text-3xl sm:text-5xl py-4 sm:py-6 w-32 sm:w-60 h-16 text-center block mb-6"
         />
         <button
-          class="btn check bg-[#eee] text-[#222] text-[1rem] px-4 py-4 font-['Press Start 2P'] hover:bg-[#ccc]"
+          class="btn check bg-[#eee] text-[#222] text-xs sm:text-sm px-4 py-3 font-['Press Start 2P'] hover:bg-[#ccc]"
         >
           Check!
         </button>
       </section>
-      <section class="right w-[52rem] text-[2rem]">
-        <p class="message mb-19 h-[3rem]">Start guessing...</p>
-        <p class="label-score mb-8">💯 Score: <span class="score">20</span></p>
+
+      <section class="right w-full sm:w-[26rem] lg:w-[52rem] text-base sm:text-xl lg:text-[2rem]">
+        <p class="message mb-6 h-8">Start guessing...</p>
+        <p class="label-score mb-4">💯 Score: <span class="score">20</span></p>
         <p class="label-highscore">
           🥇 Highscore: <span class="highscore">0</span>
         </p>
