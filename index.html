@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess My Number!</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Press Start 2P", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-blue-700 text-[#eee] m-0 p-0 text-[62.5%] box-border">
+    <header class="relative h-[35vh] border-b-[7px] border-[#eee]">
+      <h1
+        class="text-[4rem] text-center absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        Guess My Number!
+      </h1>
+      <p class="text-[1.4rem] absolute top-8 right-8">(Between 1 and 20)</p>
+      <button
+        class="btn again absolute top-4 left-8 bg-[#eee] text-[#222] text-[1rem] px-4 py-2 font-['Press Start 2P'] hover:bg-[#ccc]"
+      >
+        Again!
+      </button>
+      <div
+        class="number bg-[#eee] text-[#333] text-[6rem] w-[15rem] h-[8rem] py-2 text-center absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"
+      >
+        ?
+      </div>
+    </header>
+
+    <main class="h-[65vh] text-[#eee] flex items-center justify-around">
+      <section class="left w-[52rem] flex flex-col items-center">
+        <input
+          type="number"
+          class="guess bg-transparent border-[4px] border-[#eee] text-inherit font-['Press Start 2P'] text-[5rem] py-10 w-[15rem] h-[5rem] text-center block mb-10"
+        />
+        <button
+          class="btn check bg-[#eee] text-[#222] text-[1rem] px-4 py-4 font-['Press Start 2P'] hover:bg-[#ccc]"
+        >
+          Check!
+        </button>
+      </section>
+      <section class="right w-[52rem] text-[2rem]">
+        <p class="message mb-19 h-[3rem]">Start guessing...</p>
+        <p class="label-score mb-8">💯 Score: <span class="score">20</span></p>
+        <p class="label-highscore">
+          🥇 Highscore: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
